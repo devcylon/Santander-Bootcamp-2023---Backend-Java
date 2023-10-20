@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Contador {
 	public static void main(String[] args) {
 		Scanner terminal = new Scanner(System.in);
@@ -9,15 +8,13 @@ public class Contador {
 		int parametroDois = terminal.nextInt();
 		
 		try {
-			//chamando o método contendo a lógica de contagem
 			contar(parametroUm, parametroDois);
-		
-		}catch (ParametrosInvalidosExcection exception) {
-			//imprimir a mensagem: O segundo parâmetro deve ser maior que o primeiro
-            System.out.println("O segundo parâmetro deve ser maior que o primeiro");
 		}
-		
+		catch (ParametrosInvalidosExcection exception) {
+            System.out.println("O segundo parâmetro deve ser maior que o primeiro");
+		}	
 	}
+	
 	static void contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosExcection {
 		if (parametroDois < parametroUm) {
             throw new ParametrosInvalidosExcection();
